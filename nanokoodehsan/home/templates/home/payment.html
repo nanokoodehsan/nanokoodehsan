@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} تکمیل خرید {% endblock %}
+
+{% block content %}
+    <section class="payment-section">
+        <div class="payment-container">
+            <h2>تکمیل فرایند خرید</h2>
+
+            <!-- خلاصه سفارش -->
+            <div class="order-summary">
+                <h3>خلاصه سفارش شما</h3>
+                <table class="order-summary-table">
+                    <thead>
+                        <tr>
+                            <th>محصول</th>
+                            <th>قیمت</th>
+                            <th>تعداد</th>
+                            <th>جمع کل</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in cart_items %}
+                            <tr>
+                                <td>{{ item.product_name }}</td>
+                                <td>{{ item.price }} تومان</td>
+                                <td>{{ item.quantity }}</td>
+                                <td>{{ item.total_price }} تومان</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <div class="order-total">
+                    <h4>جمع کل:</h4>
+                    <p>{{ total_price }} تومان</p>
+                </div>
+            </div>
+
+            <!-- انتخاب روش پرداخت -->
+            <div class="payment-methods">
+                <h3>روش پرداخت</h3>
+                <form action="{% url 'process_payment' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="payment-option">
+                        <input type="radio" id="credit-card" name="payment_method" value="credit_card" checked>
+                        <label for="credit-card">پرداخت با کارت اعتباری</label>
+                    </div>
+
+                    <div class="payment-option">
+                        <input type="radio" id="bank-transfer" name="payment_method" value="bank_transfer">
+                        <label for="bank-transfer">انتقال بانکی</label>
+                    </div>
+
+                    <div class="payment-option">
+                        <input type="radio" id="cash-on-delivery" name="payment_method" value="cash_on_delivery">
+                        <label for="cash-on-delivery">پرداخت نقدی در محل</label>
+                    </div>
+
+                    <div class="payment-button">
+                        <button type="submit" class="btn">تایید و پرداخت</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

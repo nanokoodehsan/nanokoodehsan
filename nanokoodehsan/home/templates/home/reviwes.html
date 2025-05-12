@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} نظرات مشتریان | نانوکود احسان {% endblock %}
+
+{% block content %}
+    <section class="reviews-section">
+        <div class="reviews-container">
+            <h2 class="section-title">نظرات مشتریان</h2>
+            <p class="section-description">در اینجا نظرات برخی از مشتریان راضی ما را مشاهده می‌کنید که از کودهای نانوکود احسان برای بهبود رشد گیاهان و گل‌های خود استفاده کرده‌اند. با مطالعه این نظرات می‌توانید با کیفیت محصولات ما بیشتر آشنا شوید.</p>
+            
+            <div class="reviews-list">
+                <div class="review-item">
+                    <div class="reviewer-info">
+                        <img src="{% static 'images/reviewer1.jpg' %}" alt="مشتری 1" class="reviewer-img">
+                        <div class="reviewer-name">
+                            <h3>مریم حسینی</h3>
+                            <span>گل‌فروش حرفه‌ای</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>من از کود هیومیک اسید غنی شده با نانومگنتیت آهن مخصوص گل‌های آپارتمانی استفاده کردم و نتایج فوق‌العاده‌ای دیدم. گل‌های من سریع‌تر رشد کردند و رنگ‌های بسیار زیبایی پیدا کردند. این محصول واقعاً تاثیر زیادی روی کیفیت خاک و رشد گیاهان دارد.</p>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="reviewer-info">
+                        <img src="{% static 'images/reviewer2.jpg' %}" alt="مشتری 2" class="reviewer-img">
+                        <div class="reviewer-name">
+                            <h3>امیر جعفری</h3>
+                            <span>باغبان حرفه‌ای</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>با استفاده از هیومیک اسید نانوکود احسان، توانستم رشد گل‌های رز خود را بهبود ببخشم. ترکیب نانو مغناطیس آهن و هیومیک اسید در این محصول به گیاهان کمک می‌کند که مواد مغذی را بهتر جذب کنند و مقاومت بیشتری در برابر استرس‌های محیطی داشته باشند. قطعاً مجدداً خرید خواهم کرد.</p>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="reviewer-info">
+                        <img src="{% static 'images/reviewer3.jpg' %}" alt="مشتری 3" class="reviewer-img">
+                        <div class="reviewer-name">
+                            <h3>سارا کریمی</h3>
+                            <span>کشاورز</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>من از کود 10 لیتری هیومیک اسید نانوکود احسان برای گیاهان مزرعه خود استفاده کردم و تأثیر آن در رشد گیاهان شگفت‌آور بود. این کود به طور قابل توجهی رشد ریشه‌ها و شادابی گیاهان را افزایش داد و خاک مزرعه را تقویت کرد. به‌طور حتم به دیگر کشاورزان توصیه می‌کنم.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- نظرات بیشتر -->
+        <div class="more-reviews">
+            <p>آیا شما هم تجربه‌ای از محصولات نانوکود احسان دارید؟ برای ثبت نظر خود <a href="mailto:nanokoodehsan@gmail.com">اینجا کلیک کنید</a>.</p>
+        </div>
+    </section>
+
+{% endblock %}

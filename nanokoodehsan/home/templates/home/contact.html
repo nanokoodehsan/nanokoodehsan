@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} تماس با ما {% endblock %}
+
+{% block content %}
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2>تماس با نانوکود احسان</h2>
+            
+            <!-- اطلاعات تماس -->
+            <div class="contact-info">
+                <h3>راه‌های ارتباطی</h3>
+                <ul>
+                    <li><strong>شماره تماس:</strong> <a href="tel:09907392813">09907392813</a></li>
+                    <li><strong>واتساپ و تلگرام:</strong> <a href="https://wa.me/09907392813">09907392813</a></li>
+                    <li><strong>اینستاگرام:</strong> <a href="https://instagram.com/nanokoodehsan" target="_blank">@nanokoodehsan</a></li>
+                    <li><strong>ایمیل:</strong> <a href="mailto:nanokoodehsan@gmail.com">nanokoodehsan@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <!-- فرم تماس -->
+            <div class="contact-form">
+                <h3>فرم تماس</h3>
+                <form action="{% url 'send_message' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">نام شما:</label>
+                        <input type="text" id="name" name="name" required placeholder="نام خود را وارد کنید">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">ایمیل شما:</label>
+                        <input type="email" id="email" name="email" required placeholder="ایمیل خود را وارد کنید">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">پیام شما:</label>
+                        <textarea id="message" name="message" required placeholder="پیام خود را بنویسید"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">ارسال پیام</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

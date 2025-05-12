@@ -1,0 +1,6 @@
+# Ignore system files and unnecessary files
+AppData/
+Documents/
+*.log
+*.bak
+*.swp

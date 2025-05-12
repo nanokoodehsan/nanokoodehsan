@@ -1,0 +1,260 @@
+/* --- Google Font + Reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap');
+@import url('https://vazir-font.github.io/vazir-css/stylesheet.css');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  line-height: 1.7;
+  direction: rtl;
+  text-align: right;
+  background-color: #f3fdf4;
+  color: #333;
+  padding-top: 70px; /* ← به اندازه ارتفاع نوار بالا */
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Header --- */
+header {
+  background: linear-gradient(to right, #2e7d32, #388e3c);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.title-container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+.title-container p {
+  margin-top: 5px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* --- منو ناوبری --- */
+nav {
+  background-color: #1b5e20;
+  padding: 12px 0;
+  text-align: center;
+  position: fixed; /* ← تغییر اصلی */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+nav a {
+  color: white;
+  margin: 0 18px;
+  font-weight: 600;
+  position: relative;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ccff90;
+  transition: width 0.3s ease;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* --- بنر --- */
+/* --- بنر --- */
+/* --- عکس بنر --- */
+.banner img {
+  width: 100%;
+  max-width: 500px; /* اندازه‌ی کنترل‌شده و کوچکتر */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+/* --- عکس محصول در کارت --- */
+.product-image {
+  width: 100%;
+  max-width: 160px; /* کوچکتر از قبل */
+  height: auto;
+  display: block;
+  margin: 0 auto 16px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.product-card:hover .product-image {
+  transform: scale(1.06);
+}
+
+/* --- عکس‌های عمومی (در صورت وجود) --- */
+img {
+  width: 100%;
+  max-width: 160px; /* کوچکتر از قبل */
+  height: auto;
+  display: block;
+  margin: 0 auto 16px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+/* --- متن‌ها در کارت‌ها --- */
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: #555;
+  background-color: #f1f8e9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* --- متن در تماس با ما --- */
+#contact {
+  background: #f1f8e9;
+  padding: 40px 20px;
+  margin-top: 60px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+#contact h2 {
+  font-size: 24px;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  background-color: #dcedc8;
+  padding: 10px;
+  border-radius: 8px;
+}
+#contact p {
+  font-size: 15px;
+  color: #444;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+
+/* --- نظرات --- */
+.testimonials {
+  background: #f0fff0;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.06);
+  margin-top: 50px;
+  border-right: 5px solid #2e7d32;
+}
+.testimonial-item {
+  margin-bottom: 25px;
+  font-style: italic;
+  color: #424242;
+  padding-right: 20px;
+}
+.testimonial-author {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* --- فوتر --- */
+footer {
+  background-color: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  font-size: 14px;
+  border-top: 1px solid #4caf50;
+}
+
+/* --- واکنش‌گرا --- */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .banner img {
+    max-width: 85%;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .product-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

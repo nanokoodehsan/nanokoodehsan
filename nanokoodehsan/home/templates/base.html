@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}نانوکود احسان | NanoKoodEhsan{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/main-style.css' %}">
+</head>
+<body>
+
+<div class="site-wrapper">
+    {% block content %}
+    {% endblock %}
+	<nav>
+  <a href="{% url 'home:index' %}">خانه</a>
+  <a href="{% url 'home:product1' %}">محصول ۱</a>
+  <a href="{% url 'home:contact' %}">تماس با ما</a>
+  <a href="{% url 'home:reviews' %}">نظرات</a>
+</nav>
+</div>
+
+</body>
+</html>
